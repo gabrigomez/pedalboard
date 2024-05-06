@@ -17,6 +17,10 @@ qt_add_qml_module(appPedalBoard
     VERSION 1.0
     QML_FILES
         Main.qml
+        QML_FILES Title.qml
+        QML_FILES PedalBoard.qml
+        QML_FILES PedalPreview.qml
+        QML_FILES Board.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
