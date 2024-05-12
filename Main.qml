@@ -8,7 +8,7 @@ Window {
 
   title: qsTr("PedalBoard")
   width: 1500
-  height: 600
+  height: 800
 
   Title {
     id: title

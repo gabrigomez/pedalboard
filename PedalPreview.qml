@@ -14,6 +14,7 @@ Rectangle {
   ListView {
     id: listView
     anchors.fill: parent
+    anchors.leftMargin: 10
     orientation: Qt.Horizontal
     spacing: 16
 
