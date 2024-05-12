@@ -20,17 +20,32 @@ Rectangle {
 
     model: ListModel {
       ListElement {
-        color: "blue"
+        source: "previews/Delay.png"
+      }
+      ListElement {
+        source: "previews/Delay.png"
+      }
+
+      ListElement {
+        source: "previews/Delay.png"
       }
     }
 
     delegate: Rectangle {
-      color: model.color
       width: 100
       height: parent.height
+      color: "transparent"
+
+      Image {
+        source: model.source
+        anchors {
+          bottom: parent.bottom
+        }
+      }
 
       Button {
         text: "Adicionar"
+        anchors.horizontalCenter: parent.horizontalCenter
         onClicked: {
           addItem("green")
         }
