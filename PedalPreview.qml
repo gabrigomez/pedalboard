@@ -5,8 +5,8 @@ Rectangle {
   signal addItem(string color)
   width: parent.width / 1.5
   height: 170
-  color: "red"
 
+  color: "lightgray"
   anchors {
     horizontalCenter: parent.horizontalCenter
   }
