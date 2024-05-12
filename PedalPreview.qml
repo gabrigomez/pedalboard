@@ -44,10 +44,37 @@ Rectangle {
       }
 
       Button {
-        text: "Adicionar"
+        id: addButton
         anchors.horizontalCenter: parent.horizontalCenter
-        onClicked: {
-          addItem("green")
+        y: 6
+        height: 20
+        width: parent.width
+
+        background: Rectangle {
+          anchors.fill: parent
+          color: addButton.hovered ? "gray" : "darkgray"
+
+          Behavior on color {
+            PropertyAnimation {
+              duration: 200
+              easing.type: Easing.InOutQuad
+            }
+          }
+        }
+
+        Text {
+          id: addButtonText
+          text: "Add"
+          color: "white"
+          anchors.horizontalCenter: parent.horizontalCenter
+        }
+
+        MouseArea {
+          anchors.fill: parent
+          cursorShape: Qt.PointingHandCursor // Altera o cursor para a forma de mão ao passar sobre o botão
+          onClicked: {
+            addItem("green")
+          }
         }
       }
     }
