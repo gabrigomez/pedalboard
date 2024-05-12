@@ -22,6 +22,7 @@ qt_add_qml_module(appPedalBoard
         QML_FILES PedalPreview.qml
         QML_FILES Board.qml
         RESOURCES previews/Delay.png
+        RESOURCES fonts/african.ttf fonts/Browser.ttf
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

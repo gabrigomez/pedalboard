@@ -1,12 +1,17 @@
 import QtQuick
 
 Text {
+  FontLoader {
+    id: browser
+    source: "fonts/Browser.ttf"
+  }
+
   anchors {
     horizontalCenter: parent.horizontalCenter
     top: parent.top
     topMargin: 20
   }
-  text: "Pedalboard"
-  font.pixelSize: 40
-  font.bold: true
+  text: "The Pedalboard"
+  font.pixelSize: 80
+  font.family: browser.font.family
 }
