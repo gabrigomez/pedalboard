@@ -1,5 +1,6 @@
 import QtQuick
 import QtQuick.Controls
+import Pedals
 
 Rectangle {
   id: pedalBoard
@@ -42,9 +43,10 @@ Rectangle {
 
     delegate: Rectangle {
       color: model.color
-      width: 100
+      width: 320
       height: parent?.height
 
+      DelayPedal {}
       Button {
         text: "Remover"
         onClicked: {
