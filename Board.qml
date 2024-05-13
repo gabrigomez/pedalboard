@@ -15,7 +15,7 @@ Rectangle {
   }
 
   clip: true
-  color: "yellow"
+  color: "silver"
 
   anchors {
     horizontalCenter: parent.horizontalCenter
@@ -36,7 +36,7 @@ Rectangle {
 
     model: ListModel {
       ListElement {
-        color: "red"
+        color: "white"
       }
     }
 
