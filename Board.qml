@@ -52,11 +52,21 @@ Rectangle {
 
   Component {
     id: boardDelegate
+
     Rectangle {
-      id: delegateId
-      color: "white"
-      width: 310
+      id: pedalContainer
+      color: "transparent"
+      width: 300
       height: 450
+
+      Rectangle {
+        id: cableComponent
+        color: "black"
+        y: 80
+        anchors.right: pedalContainer.left
+        height: 40
+        width: 100
+      }
 
       DelayPedal {
         anchors.horizontalCenter: parent.horizontalCenter
@@ -64,6 +74,7 @@ Rectangle {
       }
       Button {
         text: "Remover"
+        anchors.horizontalCenter: parent.horizontalCenter
         onClicked: {
           if (boardListView.model.count > 0) {
             boardListView.model.remove(boardListView.model.count - 1)
