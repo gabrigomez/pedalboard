@@ -5,8 +5,8 @@ Rectangle {
   width: 300
   height: 420
   visible: true
+  color: "transparent"
 
-  color: "white"
   FontLoader {
     id: russoFontLoader
     source: "fonts/RussoOne-Regular.ttf"
