@@ -10,7 +10,7 @@ Rectangle {
     target: pedalPreview
     function onAddItem(color) {
       boardListView.model.append({
-                                   "color": color
+                                   "colorElement": color
                                  })
     }
   }
@@ -28,25 +28,40 @@ Rectangle {
 
   ListView {
     id: boardListView
+    model: boardListModel
+    delegate: boardDelegate
+
     anchors.fill: pedalBoard
     orientation: Qt.Horizontal
     layoutDirection: Qt.RightToLeft
     spacing: 25
 
-    highlightRangeMode: ListView.StrictlyEnforceRange
+    //highlightRangeMode: ListView.StrictlyEnforceRange
 
-    model: ListModel {
-      ListElement {
-        color: "white"
+    //para manter o foco sempre no fim da lista
+    onCountChanged: {
+      if (count > 0) {
+        positionViewAtIndex(count - 1, ListView.End)
       }
     }
+  }
+  ListModel {
+    id: boardListModel
+    ListElement {}
+  }
 
-    delegate: Rectangle {
-      color: model.color
-      width: 320
-      height: parent?.height
+  Component {
+    id: boardDelegate
+    Rectangle {
+      id: delegateId
+      color: "white"
+      width: 310
+      height: 450
 
-      DelayPedal {}
+      DelayPedal {
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.bottom: parent.bottom
+      }
       Button {
         text: "Remover"
         onClicked: {
@@ -54,12 +69,6 @@ Rectangle {
             boardListView.model.remove(boardListView.model.count - 1)
           }
         }
-      }
-    }
-
-    onCountChanged: {
-      if (count > 0) {
-        positionViewAtIndex(count - 1, ListView.End)
       }
     }
   }
