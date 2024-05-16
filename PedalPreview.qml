@@ -73,7 +73,7 @@ Rectangle {
           anchors.fill: parent
           cursorShape: Qt.PointingHandCursor // Altera o cursor para a forma de mão ao passar sobre o botão
           onClicked: {
-            addItem("yellow")
+            addItem("components/DistortionPedal.qml")
           }
         }
       }

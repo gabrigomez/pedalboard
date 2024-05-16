@@ -1,7 +1,7 @@
 import QtQuick
 import QtQuick.Controls
-import Pedals
 
+//import Pedals
 Rectangle {
   id: pedalBoard
   width: parent.width
@@ -10,7 +10,7 @@ Rectangle {
     target: pedalPreview
     function onAddItem(color) {
       boardListView.model.append({
-                                   "colorElement": color
+                                   "source": color
                                  })
     }
   }
@@ -47,7 +47,12 @@ Rectangle {
   }
   ListModel {
     id: boardListModel
-    ListElement {}
+    ListElement {
+      source: "components/DelayPedal.qml"
+    }
+    ListElement {
+      source: "components/DistortionPedal.qml"
+    }
   }
 
   Component {
@@ -68,10 +73,22 @@ Rectangle {
         width: 100
       }
 
-      DelayPedal {
-        anchors.horizontalCenter: parent.horizontalCenter
-        anchors.bottom: parent.bottom
+      // DelayPedal {
+      //   anchors.horizontalCenter: parent.horizontalCenter
+      //   anchors.bottom: parent.bottom
+      //   anchors.centerIn: parent
+      // }
+      Loader {
+        sourceComponent: {
+          var component = Qt.createComponent(model.source)
+          if (component.status === Component.Ready) {
+            return component
+          } else {
+            return null
+          }
+        }
       }
+
       Button {
         text: "Remover"
         anchors.horizontalCenter: parent.horizontalCenter
