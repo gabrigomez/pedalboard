@@ -85,11 +85,37 @@ Rectangle {
       }
 
       Button {
-        text: "Remover"
+        id: removeButton
+        height: 20
+        width: 70
         anchors.horizontalCenter: parent.horizontalCenter
-        onClicked: {
-          if (boardListView.model.count > 0) {
-            boardListView.model.remove(boardListView.model.count - 1)
+
+        background: Rectangle {
+          anchors.fill: parent
+          color: removeButton.hovered ? "gray" : "darkgray"
+
+          Behavior on color {
+            PropertyAnimation {
+              duration: 200
+              easing.type: Easing.InOutQuad
+            }
+          }
+        }
+
+        Text {
+          id: removeButtonText
+          text: "Remove"
+          color: "white"
+          anchors.horizontalCenter: parent.horizontalCenter
+        }
+
+        MouseArea {
+          anchors.fill: parent
+          cursorShape: Qt.PointingHandCursor // Altera o cursor para a forma de mão ao passar sobre o botão
+          onClicked: {
+            if (boardListView.model.count > 0) {
+              boardListView.model.remove(boardListView.model.count - 1)
+            }
           }
         }
       }
