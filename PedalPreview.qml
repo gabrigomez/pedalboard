@@ -21,13 +21,11 @@ Rectangle {
     model: ListModel {
       ListElement {
         source: "previews/Delay.png"
+        pedal: "components/DelayPedal.qml"
       }
       ListElement {
         source: "previews/Delay.png"
-      }
-
-      ListElement {
-        source: "previews/Delay.png"
+        pedal: "components/DistortionPedal.qml"
       }
     }
 
@@ -73,7 +71,7 @@ Rectangle {
           anchors.fill: parent
           cursorShape: Qt.PointingHandCursor // Altera o cursor para a forma de mão ao passar sobre o botão
           onClicked: {
-            addItem("components/DistortionPedal.qml")
+            addItem(pedal)
           }
         }
       }

@@ -8,9 +8,9 @@ Rectangle {
 
   Connections {
     target: pedalPreview
-    function onAddItem(color) {
+    function onAddItem(pedal) {
       boardListView.model.append({
-                                   "source": color
+                                   "source": pedal
                                  })
     }
   }
@@ -73,11 +73,6 @@ Rectangle {
         width: 100
       }
 
-      // DelayPedal {
-      //   anchors.horizontalCenter: parent.horizontalCenter
-      //   anchors.bottom: parent.bottom
-      //   anchors.centerIn: parent
-      // }
       Loader {
         sourceComponent: {
           var component = Qt.createComponent(model.source)
