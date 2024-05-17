@@ -12,8 +12,6 @@ qt_add_executable(appPedalBoard
     main.cpp
 )
 
-add_subdirectory(pedals)
-
 qt_add_qml_module(appPedalBoard
     URI PedalBoard
     VERSION 1.0
@@ -43,7 +41,7 @@ set_target_properties(appPedalBoard PROPERTIES
 )
 
 target_link_libraries(appPedalBoard
-    PRIVATE Qt6::Quick PedalsLibplugin
+    PRIVATE Qt6::Quick
 )
 
 include(GNUInstallDirs)
