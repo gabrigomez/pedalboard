@@ -16,7 +16,7 @@ Rectangle {
     anchors.fill: parent
     anchors.leftMargin: 10
     orientation: Qt.Horizontal
-    spacing: 16
+    spacing: 20
 
     model: ListModel {
       ListElement {
@@ -24,7 +24,7 @@ Rectangle {
         pedal: "components/DelayPedal.qml"
       }
       ListElement {
-        source: "previews/Delay.png"
+        source: "previews/Distortion.png"
         pedal: "components/DistortionPedal.qml"
       }
     }
@@ -36,6 +36,8 @@ Rectangle {
 
       Image {
         source: model.source
+        width: 100
+        height: 140
         anchors {
           bottom: parent.bottom
         }
