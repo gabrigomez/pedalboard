@@ -67,9 +67,9 @@ Rectangle {
       Rectangle {
         id: cableComponent
         color: "black"
-        y: 80
+        y: 56
         anchors.right: pedalContainer.left
-        height: 40
+        height: 30
         width: 100
       }
 
