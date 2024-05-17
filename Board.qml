@@ -4,7 +4,7 @@ import QtQuick.Controls
 //import Pedals
 Rectangle {
   id: pedalBoard
-  width: parent.width
+  width: root.width / 1.05
 
   Connections {
     target: pedalPreview
@@ -16,7 +16,7 @@ Rectangle {
   }
 
   clip: true
-  color: "silver"
+  color: "transparent"
 
   anchors {
     horizontalCenter: parent.horizontalCenter

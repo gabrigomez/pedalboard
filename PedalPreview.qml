@@ -2,21 +2,22 @@ import QtQuick
 import QtQuick.Controls
 
 Rectangle {
-  signal addItem(string color)
   width: parent.width / 1.5
   height: 170
-
-  color: "lightgray"
+  radius: 20
+  color: "#AFAFAF"
   anchors {
     horizontalCenter: parent.horizontalCenter
   }
 
+  signal addItem(string color)
+
   ListView {
     id: listView
     anchors.fill: parent
-    anchors.leftMargin: 10
+    anchors.leftMargin: 30
     orientation: Qt.Horizontal
-    spacing: 20
+    spacing: 30
 
     model: ListModel {
       ListElement {
