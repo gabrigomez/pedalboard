@@ -114,7 +114,7 @@ Rectangle {
           cursorShape: Qt.PointingHandCursor // Altera o cursor para a forma de mão ao passar sobre o botão
           onClicked: {
             if (boardListView.model.count > 0) {
-              boardListView.model.remove(boardListView.model.count - 1)
+              boardListView.model.remove(index)
             }
           }
         }
