@@ -8,13 +8,8 @@ Rectangle {
   color: "transparent"
 
   FontLoader {
-    id: russoFontLoader
-    source: "fonts/RussoOne-Regular.ttf"
-  }
-
-  FontLoader {
-    id: prismaFontLoader
-    source: "fonts/Prisma.ttf"
+    id: neutronsFontLoader
+    source: "fonts/NeutronsDemoRegular.ttf"
   }
 
   Item {
@@ -27,7 +22,7 @@ Rectangle {
     }
 
     Image {
-      source: "assets/Guitar-Pedal-Background.png"
+      source: "assets/Black-Background.png"
       anchors.fill: parent
     }
 
@@ -50,9 +45,9 @@ Rectangle {
     component DeviceText: Text {
       property int fontSize: 20
 
-      color: "black"
-      font.family: russoFontLoader.font.family
-      font.weight: russoFontLoader.font.weight
+      color: "white"
+      font.family: neutronsFontLoader.font.family
+      font.weight: neutronsFontLoader.font.weight
       font.pixelSize: fontSize
     }
 
@@ -169,45 +164,36 @@ Rectangle {
         property alias text: label.text
         property alias font: label.font
         property alias fontSize: label.fontSize
+        property alias color: label.color
         property int lineWidth: 200
         property int lineHeight: 2
 
         property color lineColor: "black"
 
-        Rectangle {
-          width: infoLabel.lineWidth
-          height: infoLabel.lineHeight
-          color: infoLabel.lineColor
-        }
-
         DeviceText {
           id: label
-          text: "DIRTY NOTES"
+          style: Text.Outline
           anchors.horizontalCenter: parent.horizontalCenter
-        }
-
-        Rectangle {
-          width: infoLabel.lineWidth
-          height: infoLabel.lineHeight
-          color: infoLabel.lineColor
         }
       }
 
       InfoText {
         text: "DIRTY NOTES"
-        spacing: 10
+        color: "silver"
+        font.pixelSize: 30
+        spacing: 2
         anchors {
           top: parent.verticalCenter
-          topMargin: 20
+          topMargin: 10
           horizontalCenter: parent.horizontalCenter
         }
       }
 
       InfoText {
-        text: "Input"
+        text: "In"
         spacing: 4
         lineWidth: 40
-        fontSize: 10
+        fontSize: 14
 
         anchors {
           top: parent.top
@@ -217,10 +203,10 @@ Rectangle {
       }
 
       InfoText {
-        text: "Output"
+        text: "Out"
         spacing: 4
         lineWidth: 40
-        fontSize: 10
+        fontSize: 14
 
         anchors {
           top: parent.top
@@ -230,37 +216,10 @@ Rectangle {
       }
 
       SwitchImage {
-        x: parent.width * 0.33 - width / 2
-        y: 2
+        y: 30
+        anchors.horizontalCenter: parent.horizontalCenter
         sourceBaseName: "LED"
         checked: footSwitch.checked
-
-        DeviceText {
-          text: qsTr("ON")
-          fontSize: 12
-          anchors {
-            top: parent.bottom
-            topMargin: 2
-            horizontalCenter: parent.horizontalCenter
-          }
-        }
-      }
-
-      DeviceSwitch {
-        x: parent.width * 0.66
-        y: 2
-        sourceBaseName: "Switch"
-        tapMargin: 16
-
-        DeviceText {
-          text: "MODE"
-          fontSize: 12
-          anchors {
-            top: parent.bottom
-            topMargin: 4
-            horizontalCenter: parent.horizontalCenter
-          }
-        }
       }
 
       DeviceSwitch {
@@ -277,14 +236,14 @@ Rectangle {
       }
 
       DeviceKnob {
-        anchors.left: footSwitch.left
-        y: 100
-        text: "GAIN"
+        x: 40
+        y: 80
+        text: "TONE"
       }
 
       DeviceKnob {
-        anchors.right: footSwitch.right
-        y: 100
+        x: 160
+        y: 80
         text: "DIRTY"
       }
     }
