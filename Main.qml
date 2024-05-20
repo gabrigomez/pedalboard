@@ -7,8 +7,8 @@ Window {
   color: "gray"
 
   title: qsTr("PedalBoard")
-  width: 1500
-  height: 800
+  width: 1700
+  height: 900
 
   Title {
     id: title
