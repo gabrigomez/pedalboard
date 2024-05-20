@@ -76,7 +76,7 @@ Rectangle {
         y: 56
         anchors.right: pedalContainer.left
         height: 30
-        width: 100
+        width: 25
       }
 
       Loader {
