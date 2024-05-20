@@ -32,6 +32,8 @@ qt_add_qml_module(appPedalBoard
         RESOURCES components/fonts/NeutronsDemoRegular.ttf
         QML_FILES components/ChorusPedal.qml
         RESOURCES components/fonts/JuicyFills.ttf
+        QML_FILES components/FuzzPedal.qml
+        RESOURCES components/fonts/TheDukeofPrunes.ttf
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
