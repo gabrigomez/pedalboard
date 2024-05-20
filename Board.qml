@@ -23,7 +23,7 @@ Rectangle {
     top: pedalPreview.bottom
     bottom: parent.bottom
     bottomMargin: 10
-    topMargin: 10
+    topMargin: 80
   }
 
   ListView {

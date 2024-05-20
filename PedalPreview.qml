@@ -2,8 +2,8 @@ import QtQuick
 import QtQuick.Controls
 
 Rectangle {
-  width: parent.width / 1.5
-  height: 170
+  width: parent.width / 1.8
+  height: 200
   radius: 20
   color: "#AFAFAF"
   anchors {
@@ -40,7 +40,8 @@ Rectangle {
         width: 100
         height: 140
         anchors {
-          bottom: parent.bottom
+          top: addButton.bottom
+          topMargin: 10
         }
       }
 
@@ -54,6 +55,7 @@ Rectangle {
         background: Rectangle {
           anchors.fill: parent
           color: addButton.hovered ? "gray" : "darkgray"
+          border.color: "silver"
 
           Behavior on color {
             PropertyAnimation {
