@@ -29,6 +29,8 @@ qt_add_qml_module(appPedalBoard
         QML_FILES components/DistortionPedal.qml
         RESOURCES components/assets/Black-Background.png components/assets/Blue-Background.png components/assets/Button-Pedal-Checked.png components/assets/Button-Pedal-Checked@2x.png components/assets/Button-Pedal.png components/assets/Button-Pedal@2x.png components/assets/Green-Background.png components/assets/Guitar-Pedal-Background.png components/assets/Guitar-Pedal-Background@2x.png components/assets/Knob-Dial.png components/assets/Knob-Dial@2x.png components/assets/Knob-Markings.png components/assets/Knob-Markings@2x.png components/assets/LED-Checked.png components/assets/LED-Checked@2x.png components/assets/LED.png components/assets/LED@2x.png components/assets/Pink-Background.png components/assets/Screw.png components/assets/Screw@2x.png components/assets/Switch-Checked.png components/assets/Switch-Checked@2x.png components/assets/Switch.png components/assets/Switch@2x.png components/assets/White-Background.png components/assets/Yellow-Background.png
         RESOURCES components/fonts/NeutronsDemoRegular.ttf
+        QML_FILES components/ChorusPedal.qml
+        RESOURCES components/fonts/JuicyFills.ttf
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
