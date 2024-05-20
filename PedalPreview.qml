@@ -28,6 +28,10 @@ Rectangle {
         source: "previews/Distortion.png"
         pedal: "components/DistortionPedal.qml"
       }
+      ListElement {
+        source: "previews/Chorus.png"
+        pedal: "components/ChorusPedal.qml"
+      }
     }
 
     delegate: Rectangle {
