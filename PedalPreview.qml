@@ -32,6 +32,10 @@ Rectangle {
         source: "previews/Chorus.png"
         pedal: "components/ChorusPedal.qml"
       }
+      ListElement {
+        source: "previews/Fuzz.png"
+        pedal: "components/FuzzPedal.qml"
+      }
     }
 
     delegate: Rectangle {

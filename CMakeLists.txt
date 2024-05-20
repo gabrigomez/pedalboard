@@ -24,6 +24,7 @@ qt_add_qml_module(appPedalBoard
         RESOURCES previews/Delay.png
         RESOURCES previews/Distortion.png
         RESOURCES previews/Chorus.png
+        RESOURCES previews/Fuzz.png
         RESOURCES fonts/african.ttf fonts/Browser.ttf
         QML_FILES components/DelayPedal.qml
         RESOURCES components/fonts/Prisma.ttf components/fonts/RussoOne-Regular.ttf
