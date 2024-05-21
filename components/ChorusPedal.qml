@@ -22,7 +22,7 @@ Rectangle {
     }
 
     Image {
-      source: "assets/Blue-Background.png"
+      source: "assets/CustomBlue-Background.png"
       anchors.fill: parent
     }
 
