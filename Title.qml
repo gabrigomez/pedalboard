@@ -12,6 +12,8 @@ Text {
     topMargin: 20
   }
   text: "The Pedalboard"
+  style: Text.Outline
+  color: "white"
   font.pixelSize: 80
   font.family: browser.font.family
 }
