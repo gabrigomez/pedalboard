@@ -59,6 +59,9 @@ Rectangle {
     ListElement {
       source: "components/FuzzPedal.qml"
     }
+    ListElement {
+      source: "components/TremoloPedal.qml"
+    }
   }
 
   Component {

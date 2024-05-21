@@ -33,14 +33,16 @@ qt_add_qml_module(appPedalBoard
         RESOURCES components/fonts/NeutronsDemoRegular.ttf
         QML_FILES components/ChorusPedal.qml
         RESOURCES components/fonts/JuicyFills.ttf
+        RESOURCES components/fonts/TheAugusta.otf
         QML_FILES components/FuzzPedal.qml
         RESOURCES components/fonts/TheDukeofPrunes.ttf
         components/assets/CustomWhite-Background.png
         components/assets/CustomBlue-Background.png
         components/assets/LEDBIG.png
-        components/assets/LEDBIG.png
+        components/assets/LEDBIG-Checked.png
         components/assets/Stomp.png
         components/assets/Stomp-Checked.png
+        QML_FILES components/TremoloPedal.qml
 
 )
 
