@@ -34,6 +34,7 @@ qt_add_qml_module(appPedalBoard
         QML_FILES components/ChorusPedal.qml
         RESOURCES components/fonts/JuicyFills.ttf
         RESOURCES components/fonts/TheAugusta.otf
+        RESOURCES components/fonts/Varsity.ttf
         QML_FILES components/FuzzPedal.qml
         RESOURCES components/fonts/TheDukeofPrunes.ttf
         components/assets/CustomWhite-Background.png
@@ -43,6 +44,7 @@ qt_add_qml_module(appPedalBoard
         components/assets/Stomp.png
         components/assets/Stomp-Checked.png
         QML_FILES components/TremoloPedal.qml
+        QML_FILES components/ReverbPedal.qml
 
 )
 

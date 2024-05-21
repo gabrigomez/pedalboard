@@ -60,6 +60,9 @@ Rectangle {
       source: "components/FuzzPedal.qml"
     }
     ListElement {
+      source: "components/ReverbPedal.qml"
+    }
+    ListElement {
       source: "components/TremoloPedal.qml"
     }
   }
