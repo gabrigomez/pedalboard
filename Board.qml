@@ -63,6 +63,9 @@ Rectangle {
       source: "components/ReverbPedal.qml"
     }
     ListElement {
+      source: "components/AmpPedal.qml"
+    }
+    ListElement {
       source: "components/TremoloPedal.qml"
     }
   }
