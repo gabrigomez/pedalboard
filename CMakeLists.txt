@@ -35,6 +35,7 @@ qt_add_qml_module(appPedalBoard
         RESOURCES components/fonts/JuicyFills.ttf
         QML_FILES components/FuzzPedal.qml
         RESOURCES components/fonts/TheDukeofPrunes.ttf
+        components/assets/CustomWhite-Background.png
         components/assets/LEDBIG.png
         components/assets/LEDBIG.png
         components/assets/Stomp.png
