@@ -228,7 +228,7 @@ Rectangle {
       SwitchImage {
         y: 30
         anchors.horizontalCenter: parent.horizontalCenter
-        sourceBaseName: "LED"
+        sourceBaseName: "LEDBIG"
         checked: footSwitch.checked
       }
 

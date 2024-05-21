@@ -181,44 +181,41 @@ Rectangle {
 
       DeviceSwitch {
         id: footSwitch
-        sourceBaseName: "Button-Pedal"
+        sourceBaseName: "Stomp"
         anchors {
           bottom: parent.bottom
-          right: parent.right
-          left: parent.left
-          bottomMargin: 17
-          leftMargin: 10
-          rightMargin: 10
+          bottomMargin: 30
+          horizontalCenter: parent.horizontalCenter
         }
       }
 
       DeviceKnob {
-        anchors.horizontalCenter: parent.horizontalCenter
+        x: 10
         y: 20
         text: "GATE"
       }
 
       DeviceKnob {
-        anchors.left: footSwitch.left
+        x: 185
         y: 20
         text: "VOL"
       }
 
       DeviceKnob {
-        anchors.right: footSwitch.right
+        x: 100
         y: 20
         text: "COMP"
       }
 
       DeviceKnob {
         x: 50
-        y: 100
+        y: 105
         text: "DRIVE"
       }
 
       DeviceKnob {
         x: 145
-        y: 100
+        y: 105
         text: "STAB"
       }
     }
