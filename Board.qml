@@ -1,7 +1,6 @@
 import QtQuick
 import QtQuick.Controls
 
-//import Pedals
 Rectangle {
   id: pedalBoard
   width: root.width / 1.05
