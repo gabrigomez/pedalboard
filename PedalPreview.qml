@@ -22,31 +22,31 @@ Rectangle {
     model: ListModel {
       ListElement {
         source: "previews/Delay.png"
-        pedal: "components/DelayPedal.qml"
+        pedal: "pedals/DelayPedal.qml"
       }
       ListElement {
         source: "previews/Distortion.png"
-        pedal: "components/DistortionPedal.qml"
+        pedal: "pedals/DistortionPedal.qml"
       }
       ListElement {
         source: "previews/Chorus.png"
-        pedal: "components/ChorusPedal.qml"
+        pedal: "pedals/ChorusPedal.qml"
       }
       ListElement {
         source: "previews/Fuzz.png"
-        pedal: "components/FuzzPedal.qml"
+        pedal: "pedals/FuzzPedal.qml"
       }
       ListElement {
         source: "previews/Amp.png"
-        pedal: "components/AmpPedal.qml"
+        pedal: "pedals/AmpPedal.qml"
       }
       ListElement {
         source: "previews/Reverb.png"
-        pedal: "components/ReverbPedal.qml"
+        pedal: "pedals/ReverbPedal.qml"
       }
       ListElement {
         source: "previews/Tremolo.png"
-        pedal: "components/TremoloPedal.qml"
+        pedal: "pedals/TremoloPedal.qml"
       }
     }
 

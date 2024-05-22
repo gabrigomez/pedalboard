@@ -48,10 +48,10 @@ Rectangle {
   ListModel {
     id: boardListModel
     ListElement {
-      source: "components/DelayPedal.qml"
+      source: "pedals/DelayPedal.qml"
     }
     ListElement {
-      source: "components/DistortionPedal.qml"
+      source: "pedals/DistortionPedal.qml"
     }
   }
 

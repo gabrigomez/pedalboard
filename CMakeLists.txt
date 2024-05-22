@@ -26,30 +26,30 @@ qt_add_qml_module(appPedalBoard
         RESOURCES previews/Chorus.png
         RESOURCES previews/Fuzz.png
         RESOURCES fonts/african.ttf fonts/Browser.ttf
-        QML_FILES components/DelayPedal.qml
-        RESOURCES components/fonts/Prisma.ttf components/fonts/RussoOne-Regular.ttf
-        QML_FILES components/DistortionPedal.qml
-        components/assets/Knob-Dial-Classic.png
-        RESOURCES components/assets/Black-Background.png components/assets/Blue-Background.png components/assets/Button-Pedal-Checked.png components/assets/Button-Pedal-Checked@2x.png components/assets/Button-Pedal.png components/assets/Button-Pedal@2x.png components/assets/Green-Background.png components/assets/Guitar-Pedal-Background.png components/assets/Guitar-Pedal-Background@2x.png components/assets/Knob-Dial.png components/assets/Knob-Dial@2x.png components/assets/Knob-Markings.png components/assets/Knob-Markings@2x.png components/assets/LED-Checked.png components/assets/LED-Checked@2x.png components/assets/LED.png components/assets/LED@2x.png components/assets/Pink-Background.png components/assets/Screw.png components/assets/Screw@2x.png components/assets/Switch-Checked.png components/assets/Switch-Checked@2x.png components/assets/Switch.png components/assets/Switch@2x.png components/assets/White-Background.png components/assets/Yellow-Background.png
-        RESOURCES components/fonts/NeutronsDemoRegular.ttf
-        QML_FILES components/ChorusPedal.qml
-        RESOURCES components/fonts/JuicyFills.ttf
-        RESOURCES components/fonts/TheAugusta.otf
-        RESOURCES components/fonts/Varsity.ttf
-        RESOURCES components/fonts/secrcode.ttf
-        QML_FILES components/FuzzPedal.qml
-        RESOURCES components/fonts/TheDukeofPrunes.ttf
-        components/assets/CustomWhite-Background.png
-        components/assets/CustomBlue-Background.png
-        components/assets/MuffKnob.png
-        components/assets/BluesKnob.png
-        components/assets/LEDBIG.png
-        components/assets/LEDBIG-Checked.png
-        components/assets/Stomp.png
-        components/assets/Stomp-Checked.png
-        QML_FILES components/TremoloPedal.qml
-        QML_FILES components/ReverbPedal.qml
-        QML_FILES components/AmpPedal.qml
+        QML_FILES pedals/DelayPedal.qml
+        RESOURCES pedals/fonts/Prisma.ttf pedals/fonts/RussoOne-Regular.ttf
+        QML_FILES pedals/DistortionPedal.qml
+        pedals/assets/Knob-Dial-Classic.png
+        RESOURCES pedals/assets/Black-Background.png pedals/assets/Blue-Background.png pedals/assets/Button-Pedal-Checked.png pedals/assets/Button-Pedal-Checked@2x.png pedals/assets/Button-Pedal.png pedals/assets/Button-Pedal@2x.png pedals/assets/Green-Background.png pedals/assets/Guitar-Pedal-Background.png pedals/assets/Guitar-Pedal-Background@2x.png pedals/assets/Knob-Dial.png pedals/assets/Knob-Dial@2x.png pedals/assets/Knob-Markings.png pedals/assets/Knob-Markings@2x.png pedals/assets/LED-Checked.png pedals/assets/LED-Checked@2x.png pedals/assets/LED.png pedals/assets/LED@2x.png pedals/assets/Pink-Background.png pedals/assets/Screw.png pedals/assets/Screw@2x.png pedals/assets/Switch-Checked.png pedals/assets/Switch-Checked@2x.png pedals/assets/Switch.png pedals/assets/Switch@2x.png pedals/assets/White-Background.png pedals/assets/Yellow-Background.png
+        RESOURCES pedals/fonts/NeutronsDemoRegular.ttf
+        QML_FILES pedals/ChorusPedal.qml
+        RESOURCES pedals/fonts/JuicyFills.ttf
+        RESOURCES pedals/fonts/TheAugusta.otf
+        RESOURCES pedals/fonts/Varsity.ttf
+        RESOURCES pedals/fonts/secrcode.ttf
+        QML_FILES pedals/FuzzPedal.qml
+        RESOURCES pedals/fonts/TheDukeofPrunes.ttf
+        pedals/assets/CustomWhite-Background.png
+        pedals/assets/CustomBlue-Background.png
+        pedals/assets/MuffKnob.png
+        pedals/assets/BluesKnob.png
+        pedals/assets/LEDBIG.png
+        pedals/assets/LEDBIG-Checked.png
+        pedals/assets/Stomp.png
+        pedals/assets/Stomp-Checked.png
+        QML_FILES pedals/TremoloPedal.qml
+        QML_FILES pedals/ReverbPedal.qml
+        QML_FILES pedals/AmpPedal.qml
         RESOURCES previews/Amp.png previews/Reverb.png previews/Tremolo.png
 
 )
