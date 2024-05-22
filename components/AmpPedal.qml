@@ -93,7 +93,7 @@ Rectangle {
       }
 
       Image {
-        source: "assets/Knob-Dial.png"
+        source: "assets/MuffKnob.png"
         anchors.centerIn: parent
         rotation: knob.angle
       }
@@ -175,7 +175,7 @@ Rectangle {
       SwitchImage {
         y: 140
         anchors.horizontalCenter: parent.horizontalCenter
-        sourceBaseName: "LEDBIG"
+        sourceBaseName: "LED"
         checked: footSwitch.checked
       }
 

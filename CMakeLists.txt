@@ -41,6 +41,8 @@ qt_add_qml_module(appPedalBoard
         RESOURCES components/fonts/TheDukeofPrunes.ttf
         components/assets/CustomWhite-Background.png
         components/assets/CustomBlue-Background.png
+        components/assets/MuffKnob.png
+        components/assets/BluesKnob.png
         components/assets/LEDBIG.png
         components/assets/LEDBIG-Checked.png
         components/assets/Stomp.png

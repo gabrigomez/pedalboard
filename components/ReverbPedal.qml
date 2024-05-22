@@ -93,7 +93,7 @@ Rectangle {
       }
 
       Image {
-        source: "assets/Knob-Dial.png"
+        source: "assets/BluesKnob.png"
         anchors.centerIn: parent
         rotation: knob.angle
       }
