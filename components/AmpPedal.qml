@@ -179,7 +179,7 @@ Rectangle {
         color: "black"
         fontSize: 16
         transform: Rotation {
-          origin.x: text1.width
+          origin.x: 0
           origin.y: 0
           angle: -90
         }

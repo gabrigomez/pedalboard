@@ -53,21 +53,6 @@ Rectangle {
     ListElement {
       source: "components/DistortionPedal.qml"
     }
-    ListElement {
-      source: "components/ChorusPedal.qml"
-    }
-    ListElement {
-      source: "components/FuzzPedal.qml"
-    }
-    ListElement {
-      source: "components/ReverbPedal.qml"
-    }
-    ListElement {
-      source: "components/AmpPedal.qml"
-    }
-    ListElement {
-      source: "components/TremoloPedal.qml"
-    }
   }
 
   Component {

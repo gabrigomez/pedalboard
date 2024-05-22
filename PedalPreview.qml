@@ -2,10 +2,10 @@ import QtQuick
 import QtQuick.Controls
 
 Rectangle {
-  width: parent.width / 1.8
+  width: parent.width / 1.7
   height: 200
   radius: 20
-  color: "#AFAFAF"
+  color: "darkgray"
   anchors {
     horizontalCenter: parent.horizontalCenter
   }
@@ -35,6 +35,18 @@ Rectangle {
       ListElement {
         source: "previews/Fuzz.png"
         pedal: "components/FuzzPedal.qml"
+      }
+      ListElement {
+        source: "previews/Amp.png"
+        pedal: "components/AmpPedal.qml"
+      }
+      ListElement {
+        source: "previews/Reverb.png"
+        pedal: "components/ReverbPedal.qml"
+      }
+      ListElement {
+        source: "previews/Tremolo.png"
+        pedal: "components/TremoloPedal.qml"
       }
     }
 

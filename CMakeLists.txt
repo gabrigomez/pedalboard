@@ -50,6 +50,7 @@ qt_add_qml_module(appPedalBoard
         QML_FILES components/TremoloPedal.qml
         QML_FILES components/ReverbPedal.qml
         QML_FILES components/AmpPedal.qml
+        RESOURCES previews/Amp.png previews/Reverb.png previews/Tremolo.png
 
 )
 
