@@ -163,7 +163,7 @@ Rectangle {
       InfoText {
         text: "Pink Tremolo"
         color: "pink"
-        font.pixelSize: 50
+        font.pixelSize: 44
         spacing: 2
         anchors {
           top: parent.verticalCenter
