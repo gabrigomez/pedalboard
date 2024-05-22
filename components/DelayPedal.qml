@@ -194,11 +194,12 @@ Rectangle {
       }
 
       InfoText {
-        text: "Time Killer"
+        text: "|TIME KILLER|"
+        fontSize: 28
         spacing: 10
         anchors {
           top: parent.verticalCenter
-          topMargin: 20
+          topMargin: 16
           horizontalCenter: parent.horizontalCenter
         }
       }
