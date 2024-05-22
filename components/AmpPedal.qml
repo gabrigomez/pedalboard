@@ -172,6 +172,42 @@ Rectangle {
         }
       }
 
+      InfoText {
+        text: "In"
+        spacing: 4
+        lineWidth: 20
+        color: "black"
+        fontSize: 16
+        transform: Rotation {
+          origin.x: text1.width
+          origin.y: 0
+          angle: -90
+        }
+
+        anchors {
+          top: parent.top
+          topMargin: 60
+          right: parent.right
+        }
+      }
+
+      InfoText {
+        text: "Out"
+        spacing: 4
+        lineWidth: 20
+        color: "black"
+        fontSize: 16
+        transform: Rotation {
+          angle: -90
+        }
+
+        anchors {
+          top: parent.top
+          topMargin: 60
+          left: parent.left
+        }
+      }
+
       SwitchImage {
         y: 140
         anchors.horizontalCenter: parent.horizontalCenter
