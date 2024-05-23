@@ -26,13 +26,6 @@ Rectangle {
       anchors.fill: parent
     }
 
-    component SwitchImage: Image {
-      required property string sourceBaseName
-      property bool checked
-
-      source: `assets/${sourceBaseName}${checked ? "-Checked" : ""}.png`
-    }
-
     component DeviceSwitch: SwitchImage {
       property alias tapMargin: tapHandler.margin
 

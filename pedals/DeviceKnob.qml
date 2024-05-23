@@ -5,6 +5,8 @@ Image {
   source: "assets/Knob-Markings.png"
 
   property alias text: knobLabel.text
+  property alias knobSource: knobImage.source
+  property bool knobText
 
   property int value
   property int angle
@@ -42,6 +44,7 @@ Image {
   }
 
   Image {
+    id: knobImage
     source: "assets/Knob-Dial.png"
     anchors.centerIn: parent
     rotation: knob.angle
@@ -57,6 +60,7 @@ Image {
   }
 
   DeviceText {
+    visible: knobText
     text: "MIN"
     fontSize: 6
     anchors {
@@ -66,6 +70,7 @@ Image {
   }
 
   DeviceText {
+    visible: knobText
     text: "MAX"
     fontSize: 6
     anchors {

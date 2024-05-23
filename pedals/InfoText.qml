@@ -6,6 +6,9 @@ Column {
 
   property alias text: label.text
   property alias font: label.font
+  property alias color: label.color
+  property alias style: label.style
+
   property alias fontSize: label.fontSize
   property int lineWidth: 200
   property int lineHeight: 2
@@ -21,6 +24,7 @@ Column {
   DeviceText {
     id: label
     text: "Time Killer"
+    color: "black"
     anchors.horizontalCenter: parent.horizontalCenter
   }
 

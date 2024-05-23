@@ -146,18 +146,21 @@ Rectangle {
         anchors.horizontalCenter: parent.horizontalCenter
         y: 30
         text: "LEVEL"
+        knobText: true
       }
 
       DeviceKnob {
         anchors.left: footSwitch.left
         y: 100
         text: "TIME"
+        knobText: true
       }
 
       DeviceKnob {
         anchors.right: footSwitch.right
         y: 100
         text: "FEEDBACK"
+        knobText: true
       }
     }
   }
