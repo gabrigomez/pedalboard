@@ -88,6 +88,7 @@ Rectangle {
         height: 20
         width: 70
         anchors.horizontalCenter: parent.horizontalCenter
+        anchors.bottom: pedalContainer.bottom
 
         background: Rectangle {
           anchors.fill: parent
