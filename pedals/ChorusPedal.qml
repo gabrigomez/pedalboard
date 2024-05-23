@@ -26,97 +26,6 @@ Rectangle {
       anchors.fill: parent
     }
 
-    component DeviceSwitch: SwitchImage {
-      property alias tapMargin: tapHandler.margin
-
-      TapHandler {
-        id: tapHandler
-        onTapped: parent.checked = !parent.checked
-      }
-    }
-
-    component DeviceText: Text {
-      property int fontSize: 20
-
-      color: "white"
-      font.family: neutronsFontLoader.font.family
-      font.weight: neutronsFontLoader.font.weight
-      font.pixelSize: fontSize
-    }
-
-    component DeviceKnob: Image {
-      id: knob
-      source: "assets/Knob-Markings.png"
-
-      property alias text: knobLabel.text
-
-      property int value
-      property int angle
-
-      readonly property int minValue: 0
-      readonly property int maxValue: 100
-
-      readonly property int range: knob.maxValue - knob.minValue
-
-      DragHandler {
-        target: null
-        onCentroidChanged: updateValueAndRotation()
-
-        function updateValueAndRotation() {
-          if (centroid.pressedButtons !== Qt.LeftButton) {
-            return
-          }
-
-          const startAngle = -140
-          const endAngle = 140
-
-          const yy = knob.height / 2.0 - centroid.position.y
-          const xx = centroid.position.x - knob.width / 2.0
-
-          const radianAngle = Math.atan2(yy, xx)
-          let newAngle = (-radianAngle / Math.PI * 180) + 90
-
-          newAngle = ((newAngle - knob.angle + 180) % 360) + knob.angle - 180
-
-          knob.angle = Math.max(startAngle, Math.min(newAngle, endAngle))
-          knob.value = (knob.angle - startAngle) / (endAngle - startAngle) * knob.range
-
-          console.log("angle: ", knob.angle, "value: ", knob.value)
-        }
-      }
-
-      Image {
-        source: "assets/BluesKnob.png"
-        anchors.centerIn: parent
-        rotation: knob.angle
-      }
-
-      DeviceText {
-        id: knobLabel
-        fontSize: 12
-        anchors {
-          top: knob.bottom
-          horizontalCenter: knob.horizontalCenter
-        }
-      }
-
-      DeviceText {
-        fontSize: 6
-        anchors {
-          left: knob.left
-          bottom: knob.bottom
-        }
-      }
-
-      DeviceText {
-        fontSize: 6
-        anchors {
-          right: knob.right
-          bottom: knob.bottom
-        }
-      }
-    }
-
     Item {
       anchors.fill: parent
       anchors.leftMargin: 15
@@ -124,10 +33,6 @@ Rectangle {
       anchors.topMargin: 17
       anchors.bottomMargin: 17
 
-      component ScrewImage: Image {
-        source: "assets/Screw.png"
-      }
-
       ScrewImage {
         anchors.left: parent.left
         anchors.top: parent.top
@@ -146,32 +51,17 @@ Rectangle {
       ScrewImage {
         anchors.right: parent.right
         anchors.bottom: parent.bottom
-      }
-
-      component InfoText: Column {
-        id: infoLabel
-        spacing: 6
-
-        property alias text: label.text
-        property alias font: label.font
-        property alias fontSize: label.fontSize
-        property alias color: label.color
-        property int lineWidth: 200
-        property int lineHeight: 2
-
-        property color lineColor: "black"
-
-        DeviceText {
-          id: label
-          style: Text.Outline
-          anchors.horizontalCenter: parent.horizontalCenter
-        }
       }
 
       InfoText {
         id: mainTitle
         text: "CREAM"
         color: "dodgerblue"
+        font.family: neutronsFontLoader.font.family
+        font.weight: neutronsFontLoader.font.weight
+        style: Text.Outline
+
+        lineColor: "transparent"
         font.pixelSize: 40
         spacing: 2
         anchors {
@@ -183,20 +73,26 @@ Rectangle {
       InfoText {
         text: "Chorus"
         color: "silver"
+        font.family: neutronsFontLoader.font.family
+        font.weight: neutronsFontLoader.font.weight
+        style: Text.Outline
+
+        lineColor: "transparent"
         font.pixelSize: 14
         spacing: 2
         anchors {
           top: mainTitle.bottom
-          topMargin: 10
           horizontalCenter: parent.horizontalCenter
         }
       }
 
       InfoText {
         text: "In"
+        color: "white"
+        lineColor: "transparent"
         spacing: 4
-        lineWidth: 40
-        fontSize: 8
+        lineWidth: 20
+        fontSize: 14
 
         anchors {
           top: parent.top
@@ -207,9 +103,11 @@ Rectangle {
 
       InfoText {
         text: "Out"
+        color: "white"
+        lineColor: "transparent"
         spacing: 4
-        lineWidth: 40
-        fontSize: 8
+        lineWidth: 20
+        fontSize: 14
 
         anchors {
           top: parent.top
@@ -242,18 +140,24 @@ Rectangle {
         x: 40
         y: 20
         text: "LEVEL"
+        color: "white"
+        knobSource: "assets/BluesKnob.png"
       }
 
       DeviceKnob {
         x: 100
         y: 100
         text: "CREAM RATE"
+        color: "white"
+        knobSource: "assets/BluesKnob.png"
       }
 
       DeviceKnob {
         x: 160
         y: 20
         text: "DEPTH"
+        color: "white"
+        knobSource: "assets/BluesKnob.png"
       }
     }
   }

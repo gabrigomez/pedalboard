@@ -6,6 +6,7 @@ Image {
 
   property alias text: knobLabel.text
   property alias knobSource: knobImage.source
+  property alias color: knobLabel.color
   property bool knobText
 
   property int value
