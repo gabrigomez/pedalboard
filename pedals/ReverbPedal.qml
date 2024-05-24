@@ -55,87 +55,88 @@ Rectangle {
 
       InfoText {
         text: "THE HALL"
-        color: "green"
-        font.pixelSize: 50
-        font.family: varsity.font.family
-        font.weight: varsity.font.weight
-
-        style: Text.Outline
-        lineColor: "transparent"
-        spacing: 2
         anchors {
           top: parent.verticalCenter
           topMargin: 14
           horizontalCenter: parent.horizontalCenter
         }
+        color: "green"
+
+        font.pixelSize: 50
+        font.family: varsity.font.family
+        font.weight: varsity.font.weight
+        style: Text.Outline
+
+        lineColor: "transparent"
+        spacing: 2
       }
 
       SwitchImage {
-        y: 160
-        anchors.horizontalCenter: parent.horizontalCenter
         sourceBaseName: "LEDBIG"
+        anchors.horizontalCenter: parent.horizontalCenter
+        y: 160
         checked: footSwitch.checked
       }
 
       DeviceSwitch {
         id: footSwitch
-        sourceBaseName: "Stomp"
         anchors {
           bottom: parent.bottom
           bottomMargin: 30
           horizontalCenter: parent.horizontalCenter
         }
+        sourceBaseName: "Stomp"
       }
 
       DeviceSwitch {
+        sourceBaseName: "Switch"
         x: 240
         y: 140
-        sourceBaseName: "Switch"
         tapMargin: 16
 
         DeviceText {
           text: "INTENSE"
-          fontSize: 10
-          color: "black"
           anchors {
             top: parent.bottom
             topMargin: 4
             horizontalCenter: parent.horizontalCenter
           }
+          color: "black"
+          fontSize: 10
         }
 
         DeviceText {
           text: "SOFT"
-          fontSize: 10
-          color: "black"
           anchors {
             bottom: parent.bottom
             bottomMargin: 16
             horizontalCenter: parent.horizontalCenter
           }
+          fontSize: 10
+          color: "black"
         }
       }
 
       DeviceKnob {
+        text: "REVERB"
         x: 20
         y: 20
-        text: "REVERB"
         knobSource: "assets/BluesKnob.png"
         color: "white"
       }
 
       DeviceKnob {
+        text: "TONE"
         x: 100
         y: 50
-        text: "TONE"
         knobSource: "assets/BluesKnob.png"
         color: "white"
       }
 
       DeviceKnob {
+        text: "MIX"
         x: 180
         y: 20
-        text: "MIX"
         knobSource: "assets/BluesKnob.png"
         color: "white"
       }

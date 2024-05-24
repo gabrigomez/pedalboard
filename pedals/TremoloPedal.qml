@@ -55,6 +55,11 @@ Rectangle {
 
       InfoText {
         text: "Pink Tremolo"
+        anchors {
+          top: parent.verticalCenter
+          horizontalCenter: parent.horizontalCenter
+        }
+
         color: "pink"
         font.family: theAugusta.font.family
         font.weight: theAugusta.font.weight
@@ -63,16 +68,12 @@ Rectangle {
         lineColor: "transparent"
         font.pixelSize: 44
         spacing: 2
-        anchors {
-          top: parent.verticalCenter
-          horizontalCenter: parent.horizontalCenter
-        }
       }
 
       SwitchImage {
-        y: 140
-        anchors.horizontalCenter: parent.horizontalCenter
         sourceBaseName: "LEDBIG"
+        anchors.horizontalCenter: parent.horizontalCenter
+        y: 140
         checked: footSwitch.checked
       }
 
@@ -87,16 +88,16 @@ Rectangle {
       }
 
       DeviceKnob {
+        text: "Intensity"
         x: 40
         y: 20
-        text: "Intensity"
         color: "pink"
       }
 
       DeviceKnob {
+        text: "Rate"
         x: 160
         y: 20
-        text: "Rate"
         color: "pink"
       }
     }

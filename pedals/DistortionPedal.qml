@@ -64,52 +64,53 @@ Rectangle {
 
       InfoText {
         text: "DIRTY NOTES"
-        color: "silver"
-        font.family: neutronsFontLoader.font.family
-        font.weight: neutronsFontLoader.font.weight
-        style: Text.Outline
-        lineColor: "transparent"
-        font.pixelSize: 30
-        spacing: 2
         anchors {
           top: parent.verticalCenter
           topMargin: 8
           horizontalCenter: parent.horizontalCenter
         }
+        color: "silver"
+
+        font.pixelSize: 30
+        font.family: neutronsFontLoader.font.family
+        font.weight: neutronsFontLoader.font.weight
+        style: Text.Outline
+
+        lineColor: "transparent"
+        spacing: 2
       }
 
       InfoText {
         text: "In"
-        color: "silver"
-        spacing: 4
-        lineWidth: 40
-        fontSize: 14
-
         anchors {
           top: parent.top
           topMargin: 40
           right: parent.right
         }
+        color: "silver"
+        fontSize: 14
+        spacing: 4
+        lineWidth: 40
       }
 
       InfoText {
         text: "Out"
-        color: "silver"
-        spacing: 4
-        lineWidth: 40
-        fontSize: 14
-
         anchors {
           top: parent.top
           topMargin: 40
           left: parent.left
         }
+        color: "silver"
+
+        fontSize: 14
+        spacing: 4
+        lineWidth: 40
       }
 
       SwitchImage {
-        y: 30
-        anchors.horizontalCenter: parent.horizontalCenter
         sourceBaseName: "LED"
+        anchors.horizontalCenter: parent.horizontalCenter
+        y: 30
         checked: footSwitch.checked
       }
 
@@ -127,19 +128,21 @@ Rectangle {
       }
 
       DeviceKnob {
-        x: 40
-        y: 80
         text: "TONE"
         knobSource: "assets/MuffKnob.png"
+        x: 40
+        y: 80
+
         knobText: true
         color: "silver"
       }
 
       DeviceKnob {
-        x: 160
-        y: 80
         text: "DIRTY"
         knobSource: "assets/MuffKnob.png"
+        x: 160
+        y: 80
+
         knobText: true
         color: "silver"
       }

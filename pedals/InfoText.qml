@@ -10,9 +10,9 @@ Column {
   property alias style: label.style
 
   property alias fontSize: label.fontSize
+
   property int lineWidth: 200
   property int lineHeight: 2
-
   property color lineColor: "black"
 
   Rectangle {
@@ -23,9 +23,9 @@ Column {
 
   DeviceText {
     id: label
+    anchors.horizontalCenter: parent.horizontalCenter
     text: "Time Killer"
     color: "black"
-    anchors.horizontalCenter: parent.horizontalCenter
   }
 
   Rectangle {

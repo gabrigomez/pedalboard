@@ -55,77 +55,78 @@ Rectangle {
 
       InfoText {
         id: mainTitle
-        text: "CREAM"
-        color: "dodgerblue"
-        font.family: neutronsFontLoader.font.family
-        font.weight: neutronsFontLoader.font.weight
-        style: Text.Outline
-
-        lineColor: "transparent"
-        font.pixelSize: 40
-        spacing: 2
         anchors {
           top: parent.verticalCenter
           topMargin: 10
           horizontalCenter: parent.horizontalCenter
         }
-      }
-      InfoText {
-        text: "Chorus"
-        color: "silver"
+        text: "CREAM"
+        color: "dodgerblue"
+
+        font.pixelSize: 40
         font.family: neutronsFontLoader.font.family
         font.weight: neutronsFontLoader.font.weight
         style: Text.Outline
 
         lineColor: "transparent"
-        font.pixelSize: 14
         spacing: 2
+      }
+      InfoText {
+        text: "Chorus"
         anchors {
           top: mainTitle.bottom
           horizontalCenter: parent.horizontalCenter
         }
+        color: "silver"
+
+        font.pixelSize: 14
+        font.family: neutronsFontLoader.font.family
+        font.weight: neutronsFontLoader.font.weight
+        style: Text.Outline
+
+        lineColor: "transparent"
+        spacing: 2
       }
 
       InfoText {
         text: "In"
-        color: "white"
-        lineColor: "transparent"
-        spacing: 4
-        lineWidth: 20
-        fontSize: 14
-
         anchors {
           top: parent.top
           topMargin: 40
           right: parent.right
         }
+        color: "white"
+        lineColor: "transparent"
+
+        spacing: 4
+        lineWidth: 20
+        fontSize: 14
       }
 
       InfoText {
         text: "Out"
-        color: "white"
-        lineColor: "transparent"
-        spacing: 4
-        lineWidth: 20
-        fontSize: 14
-
         anchors {
           top: parent.top
           topMargin: 40
           left: parent.left
         }
+        color: "white"
+        lineColor: "transparent"
+
+        spacing: 4
+        lineWidth: 20
+        fontSize: 14
       }
 
       SwitchImage {
-        y: 30
-        anchors.horizontalCenter: parent.horizontalCenter
         sourceBaseName: "LEDBIG"
+        anchors.horizontalCenter: parent.horizontalCenter
+        y: 30
         checked: footSwitch.checked
       }
 
       DeviceSwitch {
         id: footSwitch
-        sourceBaseName: "Button-Pedal"
         anchors {
           bottom: parent.bottom
           right: parent.right
@@ -134,6 +135,7 @@ Rectangle {
           leftMargin: 10
           rightMargin: 10
         }
+        sourceBaseName: "Button-Pedal"
       }
 
       DeviceKnob {

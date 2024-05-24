@@ -7,8 +7,8 @@ Image {
   property alias text: knobLabel.text
   property alias knobSource: knobImage.source
   property alias color: knobLabel.color
-  property bool knobText
 
+  property bool knobText
   property int value
   property int angle
 
@@ -53,30 +53,30 @@ Image {
 
   DeviceText {
     id: knobLabel
-    fontSize: 12
     anchors {
       top: knob.bottom
       horizontalCenter: knob.horizontalCenter
     }
+    fontSize: 12
   }
 
   DeviceText {
-    visible: knobText
     text: "MIN"
-    fontSize: 6
+    visible: knobText
     anchors {
       left: knob.left
       bottom: knob.bottom
     }
+    fontSize: 6
   }
 
   DeviceText {
-    visible: knobText
     text: "MAX"
-    fontSize: 6
     anchors {
       right: knob.right
       bottom: knob.bottom
     }
+    visible: knobText
+    fontSize: 6
   }
 }

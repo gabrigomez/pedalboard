@@ -4,6 +4,7 @@ Rectangle {
   id: root
   width: 300
   height: 420
+
   visible: true
   color: "transparent"
 
@@ -55,6 +56,12 @@ Rectangle {
 
       InfoText {
         text: "tiny amp"
+        anchors {
+          top: parent.verticalCenter
+          topMargin: 25
+          horizontalCenter: parent.horizontalCenter
+        }
+
         color: "black"
         lineColor: "transparent"
         style: Text.Outline
@@ -63,67 +70,64 @@ Rectangle {
         font.family: secrcode.font.family
         font.pixelSize: 40
         spacing: 2
-        anchors {
-          top: parent.verticalCenter
-          topMargin: 25
-          horizontalCenter: parent.horizontalCenter
-        }
       }
 
       InfoText {
         text: "In"
-        spacing: 4
-        lineWidth: 20
-        color: "black"
-        lineColor: "transparent"
-        fontSize: 16
-        transform: Rotation {
-          origin.x: 0
-          origin.y: 0
-          angle: -90
-        }
-
         anchors {
           top: parent.top
           topMargin: 60
           right: parent.right
         }
+        spacing: 4
+        lineWidth: 20
+
+        color: "black"
+        lineColor: "transparent"
+        fontSize: 16
+
+        transform: Rotation {
+          origin.x: 0
+          origin.y: 0
+          angle: -90
+        }
       }
 
       InfoText {
         text: "Out"
-        spacing: 4
-        lineWidth: 20
-        color: "black"
-        lineColor: "transparent"
-        fontSize: 16
-        transform: Rotation {
-          angle: -90
-        }
-
         anchors {
           top: parent.top
           topMargin: 60
           left: parent.left
           leftMargin: -10
         }
+
+        color: "black"
+        lineColor: "transparent"
+        fontSize: 16
+
+        spacing: 4
+        lineWidth: 20
+        transform: Rotation {
+          angle: -90
+        }
       }
 
       SwitchImage {
-        y: 140
-        anchors.horizontalCenter: parent.horizontalCenter
         sourceBaseName: "LED"
+        anchors.horizontalCenter: parent.horizontalCenter
+        y: 140
         checked: footSwitch.checked
       }
 
       DeviceSwitch {
         id: footSwitch
-        sourceBaseName: "Stomp"
         anchors {
           bottom: parent.bottom
           bottomMargin: 30
           horizontalCenter: parent.horizontalCenter
         }
+        sourceBaseName: "Stomp"
       }
 
       DeviceKnob {

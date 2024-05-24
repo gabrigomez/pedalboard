@@ -60,72 +60,70 @@ Rectangle {
 
       InfoText {
         text: "|TIME KILLER|"
-        fontSize: 28
-        spacing: 10
         anchors {
           top: parent.verticalCenter
           topMargin: 16
           horizontalCenter: parent.horizontalCenter
         }
+        fontSize: 28
+        spacing: 10
       }
 
       InfoText {
         text: "Input"
-        spacing: 4
-        lineWidth: 40
-        fontSize: 10
-
         anchors {
           top: parent.top
           topMargin: 40
           right: parent.right
         }
+        spacing: 4
+        lineWidth: 40
+        fontSize: 10
       }
 
       InfoText {
         text: "Output"
-        spacing: 4
-        lineWidth: 40
-        fontSize: 10
-
         anchors {
           top: parent.top
           topMargin: 40
           left: parent.left
         }
+        spacing: 4
+        lineWidth: 40
+        fontSize: 10
       }
 
       SwitchImage {
+        sourceBaseName: "LED"
         x: parent.width * 0.33 - width / 2
         y: 2
-        sourceBaseName: "LED"
         checked: footSwitch.checked
 
         DeviceText {
           text: qsTr("ON")
-          fontSize: 12
           anchors {
             top: parent.bottom
             topMargin: 2
             horizontalCenter: parent.horizontalCenter
           }
+          fontSize: 12
         }
       }
 
       DeviceSwitch {
+        sourceBaseName: "Switch"
         x: parent.width * 0.66
         y: 2
-        sourceBaseName: "Switch"
         tapMargin: 16
 
         DeviceText {
           text: "MODE"
-          fontSize: 12
           anchors {
             top: parent.bottom
             topMargin: 4
             horizontalCenter: parent.horizontalCenter
           }
+          fontSize: 12
         }
       }
 
@@ -143,23 +141,23 @@ Rectangle {
       }
 
       DeviceKnob {
+        text: "LEVEL"
         anchors.horizontalCenter: parent.horizontalCenter
         y: 30
-        text: "LEVEL"
         knobText: true
       }
 
       DeviceKnob {
+        text: "TIME"
         anchors.left: footSwitch.left
         y: 100
-        text: "TIME"
         knobText: true
       }
 
       DeviceKnob {
+        text: "FEEDBACK"
         anchors.right: footSwitch.right
         y: 100
-        text: "FEEDBACK"
         knobText: true
       }
     }

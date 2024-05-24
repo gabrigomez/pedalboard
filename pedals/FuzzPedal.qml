@@ -56,22 +56,24 @@ Rectangle {
       InfoText {
         id: mainTitle
         text: "FUZZ INDUSTRY"
-        font.family: theDukeofPrunes.font.family
-        font.weight: theDukeofPrunes.font.weight
-        color: "black"
-        lineColor: "transparent"
-        font.pixelSize: 21
         anchors {
           top: parent.verticalCenter
           topMargin: 24
           horizontalCenter: parent.horizontalCenter
         }
+
+        font.pixelSize: 21
+        font.family: theDukeofPrunes.font.family
+        font.weight: theDukeofPrunes.font.weight
+
+        color: "black"
+        lineColor: "transparent"
       }
 
       SwitchImage {
-        y: 4
-        anchors.horizontalCenter: parent.horizontalCenter
         sourceBaseName: "LED"
+        anchors.horizontalCenter: parent.horizontalCenter
+        y: 4
         checked: footSwitch.checked
       }
 
@@ -86,15 +88,15 @@ Rectangle {
       }
 
       DeviceKnob {
+        text: "GATE"
         x: 10
         y: 20
-        text: "GATE"
       }
 
       DeviceKnob {
+        text: "VOL"
         x: 185
         y: 20
-        text: "VOL"
       }
 
       DeviceKnob {
@@ -104,15 +106,15 @@ Rectangle {
       }
 
       DeviceKnob {
+        text: "DRIVE"
         x: 50
         y: 105
-        text: "DRIVE"
       }
 
       DeviceKnob {
+        text: "STAB"
         x: 145
         y: 105
-        text: "STAB"
       }
     }
   }
