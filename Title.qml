@@ -15,6 +15,7 @@ Text {
   color: "white"
 
   style: Text.Outline
+  styleColor: "black"
   font.pixelSize: 80
   font.family: browser.font.family
 }

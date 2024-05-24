@@ -57,6 +57,7 @@ qt_add_qml_module(appPedalBoard
         QML_FILES pedals/DeviceKnob.qml
         QML_FILES pedals/ScrewImage.qml
         QML_FILES pedals/InfoText.qml
+        QML_FILES TitleLine.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

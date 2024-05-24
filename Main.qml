@@ -16,8 +16,23 @@ Window {
     height: root.height
   }
 
+  TitleLine {
+    anchors {
+      top: title.top
+      horizontalCenter: parent.horizontalCenter
+    }
+  }
+
   Title {
     id: title
+  }
+
+  TitleLine {
+    width: parent.width / 1.8
+    anchors {
+      top: title.bottom
+      horizontalCenter: parent.horizontalCenter
+    }
   }
 
   PedalBoard {}
