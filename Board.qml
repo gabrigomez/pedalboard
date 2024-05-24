@@ -36,13 +36,13 @@ Rectangle {
     spacing: 25
 
     //highlightRangeMode: ListView.StrictlyEnforceRange
-
     //para manter o foco sempre no fim da lista
     onCountChanged: {
       if (count > 0) {
         positionViewAtIndex(count - 1, ListView.End)
       }
     }
+    ScrollBar.horizontal: ScrollBar {}
   }
   ListModel {
     id: boardListModel
