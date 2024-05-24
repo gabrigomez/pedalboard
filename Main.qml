@@ -3,17 +3,17 @@ import QtQuick.Controls
 
 Window {
   id: root
+  width: 1700
+  height: 900
   visible: true
   color: "gray"
 
   title: qsTr("PedalBoard")
-  width: 1700
-  height: 900
 
   Image {
-    source: "https://wallpapercave.com/wp/NcdPGXX.jpg"
     width: root.width
     height: root.height
+    source: "https://wallpapercave.com/wp/NcdPGXX.jpg"
   }
 
   TitleLine {

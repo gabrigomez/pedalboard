@@ -4,11 +4,12 @@ import QtQuick.Controls
 Rectangle {
   width: parent.width / 1.7
   height: 200
-  radius: 20
-  color: "darkgray"
   anchors {
     horizontalCenter: parent.horizontalCenter
   }
+
+  radius: 20
+  color: "darkgray"
 
   signal addItem(string color)
 
@@ -56,21 +57,22 @@ Rectangle {
       color: "transparent"
 
       Image {
-        source: model.source
         width: 100
         height: 140
         anchors {
           top: addButton.bottom
           topMargin: 10
         }
+
+        source: model.source
       }
 
       Button {
         id: addButton
-        anchors.horizontalCenter: parent.horizontalCenter
-        y: 6
         height: 20
         width: parent.width
+        anchors.horizontalCenter: parent.horizontalCenter
+        y: 6
 
         background: Rectangle {
           anchors.fill: parent
@@ -87,14 +89,14 @@ Rectangle {
 
         Text {
           id: addButtonText
+          anchors.horizontalCenter: parent.horizontalCenter
           text: "Add"
           color: "white"
-          anchors.horizontalCenter: parent.horizontalCenter
         }
 
         MouseArea {
           anchors.fill: parent
-          cursorShape: Qt.PointingHandCursor // Altera o cursor para a forma de mão ao passar sobre o botão
+          cursorShape: Qt.PointingHandCursor // Altera o cursor para a forma de 'mão' ao passar sobre o botão
           onClicked: {
             addItem(pedal)
           }

@@ -59,17 +59,18 @@ Rectangle {
 
     Rectangle {
       id: pedalContainer
-      color: "transparent"
       width: 300
       height: 450
+      color: "transparent"
 
       Rectangle {
         id: cableComponent
-        color: "black"
-        y: 56
-        anchors.right: pedalContainer.left
         height: 30
         width: 25
+        anchors.right: pedalContainer.left
+        y: 56
+
+        color: "black"
       }
 
       Loader {
@@ -104,9 +105,9 @@ Rectangle {
 
         Text {
           id: removeButtonText
+          anchors.horizontalCenter: parent.horizontalCenter
           text: "Remove"
           color: "white"
-          anchors.horizontalCenter: parent.horizontalCenter
         }
 
         MouseArea {
