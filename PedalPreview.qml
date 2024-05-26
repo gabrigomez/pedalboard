@@ -2,7 +2,7 @@ import QtQuick
 import QtQuick.Controls
 
 Rectangle {
-  width: parent.width / 1.7
+  width: 950
   height: 200
   anchors {
     horizontalCenter: parent.horizontalCenter
